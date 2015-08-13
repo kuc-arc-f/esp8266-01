@@ -4,9 +4,6 @@
 #include <SerialBase.h>
 
 
-string mSSID="your-SSID";
-string mPassword="your-pass";
-
 string MC_ID="0";
 string mRestKey="";
 
@@ -87,23 +84,6 @@ bool wait_forKey(  string sKey, int wCount){
     return ret;
 }
 
-// init_proc
-bool init_proc(){
-    bool ret=false;
-    mPc.printf("AT+CWMODE=1\r\n");
-    wait(mWait_Debug);
-    if(wait_forKey(  mOK_STR, 100)==false){
-        return ret;
-    }
-    mPc.printf("AT+CWJAP=\"%s\",\"%s\"\r\n" ,mSSID ,mPassword);
-    wait(6);
-    if(wait_forKey(  mOK_STR, 300)==false){
-        return ret;
-    }
-
-    ret=true;    
-    return ret;
-}
 
 //
 string get_message(){
