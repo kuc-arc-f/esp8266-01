@@ -10,6 +10,6 @@ esp-wroom-02 connect USB-Serial Adapter
 http://knaka0209.blogspot.jp/2015/08/esp-wroom-02-01.html#at-setting
 
 [Next Step] 
-build code (mbed sdk), write to LPC1114FN28
+build code (mbed sdk) , write to LPC1114FN28
 
 
